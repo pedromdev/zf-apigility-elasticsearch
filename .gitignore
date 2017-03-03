@@ -23,3 +23,8 @@ data/DoctrineORMModule/cache/
 # Legacy ZF1
 demos/
 extras/documentation
+/nbproject/private/
+
+# Other ignored files
+nbproject/
+tests/tmp/
