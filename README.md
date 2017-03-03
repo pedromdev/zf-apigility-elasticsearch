@@ -1,2 +1,2 @@
-# zf-apigility-elasticsearch
-Apigility Elasticsearch Module
+# Elasticsearch module for Apigility
+
