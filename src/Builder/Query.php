@@ -44,8 +44,7 @@ final class Query implements BuilderInterface
     public function __call($name, $arguments)
     {
         if (in_array($name, $this->boolQueryMethods)) {
-            $arguments = array_slice(func_get_args(), 1);
-            call_user_func_array([$this, 'boolQuery'], array_merge([$name], $arguments[0]));
+            call_user_func_array([$this, 'boolQuery'], array_merge([$name], $arguments));
         }
         return $this;
     }
