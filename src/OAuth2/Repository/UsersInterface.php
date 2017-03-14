@@ -5,7 +5,7 @@ namespace ElasticsearchModule\Apigility\OAuth2\Repository;
 /**
  * @author Pedro Alves <pedro.m.develop@gmail.com>
  */
-interface UsersInterface
+interface UsersInterface extends RepositoryInterface
 {
     
     /**
