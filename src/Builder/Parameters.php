@@ -52,9 +52,9 @@ final class Parameters implements BuilderInterface
     
     /**
      * @param int $maxResults
-     * @return Parameters
+     * @return $this
      */
-    public function withMaxResults($maxResults)
+    public function limitedTo($maxResults)
     {
         $this->params['body']['size'] = $maxResults;
         return $this;
@@ -62,11 +62,21 @@ final class Parameters implements BuilderInterface
     
     /**
      * @param int $from
-     * @return Parameters
+     * @return $this
      */
     public function fromResult($from)
     {
         $this->params['body']['from'] = $from;
+        return $this;
+    }
+    
+    /**
+     * @param string $id
+     * @return $this
+     */
+    public function byId($id)
+    {
+        $this->params['body']['id'] = $id;
         return $this;
     }
     
