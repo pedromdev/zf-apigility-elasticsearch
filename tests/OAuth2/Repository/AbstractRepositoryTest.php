@@ -16,11 +16,6 @@ abstract class AbstractRepositoryTest extends PHPUnit_Framework_TestCase
 {
     
     /**
-     * @var Parameters
-     */
-    private $parameters;
-    
-    /**
      * @param string $word
      * @return string
      */
@@ -34,7 +29,7 @@ abstract class AbstractRepositoryTest extends PHPUnit_Framework_TestCase
      * @param array $methods
      * @return PHPUnit_Framework_MockObject_MockObject|Client
      */
-    protected function createClientMock(array $methods = [])
+    protected function createClientMock(array $methods)
     {
         return $this->getMockBuilder(Client::class)
             ->disableOriginalConstructor()
@@ -110,10 +105,7 @@ abstract class AbstractRepositoryTest extends PHPUnit_Framework_TestCase
      */
     protected function parameters()
     {
-        if (is_null($this->parameters)) {
-            $this->parameters = Parameters::getInstance($this->getIndex(), $this->getType());
-        }
-        return $this->parameters;
+        return Parameters::getInstance($this->getIndex(), $this->getType());
     }
     
     /**
