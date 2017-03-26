@@ -1,0 +1,42 @@
+{
+    "name": "pedromdev/zf-apigility-elasticsearch",
+    "description": "Elasticsearch module for Apigility",
+    "type": "library",
+    "license": "Apache-2.0",
+    "keywords": [
+        "apigility",
+        "api",
+        "zf",
+        "elasticsearch",
+        "search"
+    ],
+    "authors": [
+        {
+            "name": "Pedro Alves",
+            "email": "pedro.m.develop@gmail.com"
+        }
+    ],
+    "require": {
+        "zfcampus/zf-apigility": "^1.3",
+        "pedromdev/elasticsearch-module": "~1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8 || ^5.0",
+        "satooshi/php-coveralls": "~1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ElasticsearchModule\\Apigility\\" : "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ElasticsearchModuleTest\\Apigility\\" : "tests/"
+        }
+    },
+    "scripts": {
+        "unit-tests": "vendor/bin/phpunit -c phpunit.xml.dist",
+        "coveralls": "vendor/bin/coveralls -v",
+        "scrutinizer-ocular": "php ocular.phar code-coverage:upload --format=php-clover ./build/coverage-clover.xml"
+    }
+}
