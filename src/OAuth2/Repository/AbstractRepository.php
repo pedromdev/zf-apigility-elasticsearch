@@ -27,6 +27,11 @@ abstract class AbstractRepository implements RepositoryInterface
     private $type;
     
     /**
+     * @var Parameters
+     */
+    private $parameters;
+    
+    /**
      * @param Client $elasticClient
      */
     public function __construct(Client $elasticClient, $index, $type)
